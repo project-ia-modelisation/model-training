@@ -1,9 +1,13 @@
 import os
 import torch
 import trimesh
-from scripts.train import train_model
-from scripts.evaluate import evaluate_model, load_preprocessed_model
-from scripts.generate import generate_and_save_model
+import sys 
+
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
+
+from train import train_model
+from script.evaluate import evaluate_model, load_preprocessed_model
+from script.generate import generate_and_save_model
 from models.model import Simple3DGenerator, Simple2DGenerator
 from visualisation.lecture import read_image, evaluate_image, save_image
 
