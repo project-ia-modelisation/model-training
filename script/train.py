@@ -5,8 +5,8 @@ import torch.optim as optim
 import cv2
 from torch.utils.data import DataLoader, Dataset
 from models.model import Simple3DGenerator, Simple2DGenerator
-from scripts.preprocess import load_and_preprocess_model
-from scripts.prompt_handler import PromptHandler  # Import modifié
+from data_processing.scripts.preprocess import load_and_preprocess_model
+from data_processing.scripts.prompt_handler import PromptHandler 
 
 class Model3DDataset(Dataset):
     def __init__(self, model_files, num_vertices=1000):
